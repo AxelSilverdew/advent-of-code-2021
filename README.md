@@ -1,13 +1,8 @@
 # Advent of Code 2021 Solutions
 
----
-
 I'm attempting this year's AoC in Rust.
 I don't know how far I'll get, but I'm gonna try to have fun with it.
 
-To run any solution, `cd` into it's directory and run it with cargo.
+Each day's solutions are in their own module and they're all being executed from the main.rs.
 
-```
-$ cd day_01
-$ cargo run --release < input/input.txt
-```
+To see the output, just `git clone` this repo and do a `cargo run`.
