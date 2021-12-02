@@ -7,18 +7,19 @@
 //!
 //! To see the output, just `git clone` this repo and do a `cargo run`.
 
+use std::{fs::read_to_string, path::Path, str::FromStr};
+
 pub mod day_1;
+pub mod day_2;
 
-pub fn parse_input(input: &str) -> Vec<i64> {
-    input
-        .split_whitespace()
-        .map(str::parse)
-        .map(Result::unwrap)
+pub fn input_to_vec<T, P>(input: P) -> Vec<T>
+where
+    P: AsRef<Path>,
+    T: FromStr,
+    <T as FromStr>::Err: std::fmt::Debug,
+{
+    let data = read_to_string(&input).expect("Input file missing");
+    data.lines()
+        .map(|x| x.parse().expect("Unable to parse line"))
         .collect()
-}
-
-#[test]
-pub fn test_parse_input() {
-    let input = parse_input("199 200 208 210 200 207 240 269 260 263");
-    assert_eq!(input.len(), 10);
 }
