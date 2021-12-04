@@ -12,6 +12,7 @@ use std::{fs::read_to_string, path::Path, str::FromStr};
 pub mod day_1;
 pub mod day_2;
 pub mod day_3;
+pub mod day_4;
 
 pub fn input_to_vec<T, P>(input: P) -> Vec<T>
 where
