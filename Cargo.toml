@@ -18,6 +18,7 @@ path = "src/main.rs"
 
 [dependencies]
 itermore = "0.1.0"
+itertools = "0.10.1"
 nalgebra = "0.29.0"
 
 [features]
