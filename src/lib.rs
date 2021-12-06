@@ -14,6 +14,7 @@ pub mod day_2;
 pub mod day_3;
 pub mod day_4;
 pub mod day_5;
+pub mod day_6;
 
 pub fn input_to_vec<T, P>(input: P) -> Vec<T>
 where
@@ -24,5 +25,13 @@ where
     let data = read_to_string(&input).expect("Input file missing");
     data.lines()
         .map(|x| x.parse().expect("Unable to parse line"))
+        .collect()
+}
+
+pub fn string_to_vec(input: &str) -> Vec<usize> {
+    input
+        .trim()
+        .split(",")
+        .map(|s| s.parse().unwrap())
         .collect()
 }

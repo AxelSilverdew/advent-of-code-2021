@@ -1,3 +1,6 @@
+//! # Day 4's Solutions.
+//! You can look at the question [here](https://adventofcode.com/2021/day/5).
+
 use itertools::Itertools;
 
 pub fn parse_line(line: &str) -> ((usize, usize), (usize, usize)) {

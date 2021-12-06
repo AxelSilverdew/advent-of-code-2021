@@ -3,7 +3,7 @@
 use advent_runner::{
     day_1, day_2,
     day_3::{self, read_input},
-    day_4, day_5, input_to_vec,
+    day_4, day_5, day_6, input_to_vec,
 };
 fn main() {
     {
@@ -42,6 +42,13 @@ fn main() {
         println!("=== Day 5 Solutions ===");
         println!("Part 1 Solution: {:?}", day_5::part_1(&day_5_input));
         println!("Part 2 Solution: {:?}", day_5::part_2(&day_5_input));
+        println!();
+    }
+    {
+        let day_6_input = include_str!("inputs/day_6.txt");
+        println!("=== Day 6 Solutions ===");
+        println!("Part 1 Solution: {:?}", day_6::calculate(&day_6_input, 80));
+        println!("Part 1 Solution: {:?}", day_6::calculate(&day_6_input, 256));
         println!();
     }
 }
